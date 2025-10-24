@@ -7,6 +7,7 @@
   --bg: #ffffff;
   --text: #1f2937;
   --border: #e5e7eb;
+  --separator: rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +15,7 @@
     --bg: #111827;
     --text: #f3f4f6;
     --border: #374151;
+    --separator: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -101,15 +103,24 @@ main {
 }
 
 #checklist > li {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 #checklist > li:first-child {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 #checklist > li > .topic-item {
   font-weight: 700;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  display: block;
+  border-top: 3px solid var(--separator);
+}
+
+#checklist > li:first-child > .topic-item {
+  border-top: none;
+  padding-top: 0;
 }
 
 ul {

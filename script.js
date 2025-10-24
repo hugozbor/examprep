@@ -213,7 +213,10 @@ function toggleStatus(element) {
 document.addEventListener("DOMContentLoaded", () => {
   const checklistContainer = document.getElementById("checklist");
   const checklist = buildChecklist(STUDY_TOPICS);
-  checklistContainer.appendChild(checklist);
+
+  while (checklist.firstChild) {
+    checklistContainer.appendChild(checklist.firstChild);
+  }
 
   updateCountdown();
   setInterval(updateCountdown, 1000);

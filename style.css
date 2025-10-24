@@ -1,0 +1,176 @@
+:root {
+  --status-grey: #9ca3af;
+  --status-red: #ef4444;
+  --status-orange: #fb923c;
+  --status-yellow: #facc15;
+  --status-green: #22c55e;
+  --bg: #ffffff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --text: #f3f4f6;
+    --border: #374151;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#countdown {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.legend-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.legend-grey {
+  background: var(--status-grey);
+}
+
+.legend-red {
+  background: var(--status-red);
+}
+
+.legend-orange {
+  background: var(--status-orange);
+}
+
+.legend-yellow {
+  background: var(--status-yellow);
+}
+
+.legend-green {
+  background: var(--status-green);
+}
+
+#checklist {
+  list-style: none;
+}
+
+#checklist > li {
+  margin-top: 4rem;
+}
+
+#checklist > li:first-child {
+  margin-top: 2rem;
+}
+
+#checklist > li > .topic-item {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+.topic-item {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: opacity 0.2s;
+  user-select: none;
+}
+
+.topic-item:hover {
+  opacity: 0.5;
+}
+
+.topic-item:focus {
+  outline: none;
+}
+
+.topic-item[data-status="grey"] {
+  color: var(--status-grey);
+}
+
+.topic-item[data-status="red"] {
+  color: var(--status-red);
+}
+
+.topic-item[data-status="orange"] {
+  color: var(--status-orange);
+}
+
+.topic-item[data-status="yellow"] {
+  color: var(--status-yellow);
+}
+
+.topic-item[data-status="green"] {
+  color: var(--status-green);
+}
+
+ul ul {
+  margin-left: 2rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  #countdown {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  ul ul {
+    margin-left: 1.5rem;
+  }
+}
